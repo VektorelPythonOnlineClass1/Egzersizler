@@ -21,6 +21,12 @@
 # print(os.listdir())
 
 
-import os
-print(os.getcwd())
-print(os.listdir())
+# import os
+# print(os.getcwd())
+# print(os.listdir())
+
+import random as rnd
+liste =  ["Hami","Hikmet","Busra","Hunkar","Kagan","Selim","Osman","Sinan","Tolga","Zeynep","Ozgur"]
+print(rnd.choice(liste))
+print(rnd.sample(liste,2))
+print(rnd.shuffle(liste))
