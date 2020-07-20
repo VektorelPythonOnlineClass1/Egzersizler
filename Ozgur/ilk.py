@@ -1,2 +1,2 @@
 print("fsafdsadas")
-print
+print("fasfas")
