@@ -9,25 +9,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-<<<<<<< HEAD
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Python: Geçerli Dosya",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Python: Geçerli Dosya",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-=======
             "console": "externalTerminal"
->>>>>>> a3bd442fb855a3c40af5dfe40657fef3915a69f6
         }
     ]
 }
