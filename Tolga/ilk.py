@@ -1,3 +1,6 @@
+import os
+print(os.path)
+
 class Elemanlar:
     zam = 0.05
     def __init__(self,ad,soyad,maas):
