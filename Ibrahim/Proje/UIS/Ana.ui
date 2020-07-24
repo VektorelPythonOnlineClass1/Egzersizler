@@ -37,7 +37,7 @@
         <string/>
        </property>
        <property name="text">
-        <string>vektorelpython20@gmail.com</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -51,7 +51,7 @@
      <item row="1" column="1">
       <widget class="QLineEdit" name="txtSifre">
        <property name="text">
-        <string>Vektorel2004</string>
+        <string/>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -75,7 +75,7 @@
        </property>
       </widget>
      </item>
-     <item row="7" column="1">
+     <item row="8" column="1">
       <widget class="QLabel" name="lblSonuc">
        <property name="text">
         <string/>
@@ -83,7 +83,11 @@
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QLineEdit" name="txtFollow"/>
+      <widget class="QLineEdit" name="txtFollow">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
      </item>
      <item row="5" column="1">
       <widget class="QPushButton" name="btFollow">
@@ -102,6 +106,16 @@
        </property>
        <property name="text">
         <string>Takip Bırak</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QPushButton" name="btFollowList">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Takipçi Listesi</string>
        </property>
       </widget>
      </item>
