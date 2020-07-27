@@ -11,7 +11,7 @@ from openpyxl.worksheet.table import Table, TableStyleInfo
 import xlrd
 
 #ilk başta Excel dökümanı deklare edilmektedir. Dosya,Sayfa ve Hücreleri 
-book = xlrd.open_workbook('Egzersizler\Sinan\proje3\TEST_EXCEL.xlsx')
+book = xlrd.open_workbook(r'Sinan\proje3\TEST_EXCEL.xlsx')
 sheet = book.sheet_by_name('Sheet')
 data = [[sheet.cell_value(r, c) for c in range(sheet.ncols)] for r in range(sheet.nrows)]
 
