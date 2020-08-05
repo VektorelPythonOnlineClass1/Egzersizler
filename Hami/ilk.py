@@ -1,9 +1,9 @@
-from selenium import webdriver
+print(" oyuncu kaydetme")
 
-browser = webdriver.Chrome(r"C:\Users\hamik\Desktop\Vektörel Bilişim\KendiNotlarım\projelerim\boot\chromedriver.exe")
-
-browser.get('http://www.hamikeserci.com/')
-
-sleep(5)
-
-browser.close()
+ad= input("Oyuncunun adı:  ")
+soyad= input("Oyuncunun soyadı: ")
+takim= input("Oyuncunun takımı: ")
+bilgiler=[ad,soyad,takim]
+print("bilgiler kaydediliyor...")
+print("Oyuncunun adı: {}\nOyuncunun Soyadı:  {}\n Oyuncunun takımı: {}\n".format(bilgiler[0],bilgiler[1],bilgiler[2]))
+print("bilgiler kaydedildi")
