@@ -3,14 +3,14 @@ from django.utils import timezone
 
 
 class iletisimModel(models.Model):
-    adi = models.CharField(max_length=100)
-    soyadi = models.CharField(max_length=100)
-    telefon = models.CharField(max_length=10)
-    eposta = models.EmailField()
-    konu = models.TextField()
-    aciklama = models.TextField()
-    gonderi_tar = models.DateTimeField(default=timezone.now)
-    okunma_tar = models.DateTimeField(blank=True,null=True)
+    adi = models.CharField(max_length=100,verbose_name="Adı")
+    soyadi = models.CharField(max_length=100,verbose_name="Soyadı")
+    telefon = models.CharField(max_length=10,verbose_name="Telefon")
+    eposta = models.EmailField(verbose_name="E-Posta")
+    konu = models.TextField(verbose_name="Konu")
+    aciklama = models.TextField(verbose_name="Açıklama")
+    gonderi_tar = models.DateTimeField(default=timezone.now,verbose_name="Gönderim Tarihi")
+    okunma_tar = models.DateTimeField(blank=True,null=True,verbose_name="Okunma Tarihi")
 
     def okundu(self):
         self.okunma_tar = timezone.now()
