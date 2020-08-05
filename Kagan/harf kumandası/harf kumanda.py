@@ -18,15 +18,15 @@ class App(QMainWindow):
 
 
     def giris(self):
-        user = self.win.harf.text()
+        harf = self.win.harf.text()
         self.kumanda = HarfKumanda()
         self.kumanda.girisYap()    
 
     
 
 class HarfKumanda:
-    def __init__(self,kullaniciAdi):
-        self.kullaniciAdi = kullaniciAdi
+    def __init__(self,harf):
+        self.harf = harf
 
 
 
