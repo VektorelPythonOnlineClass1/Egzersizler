@@ -11,7 +11,7 @@ class App(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        self.win = uic.loadUi(r"Ibrahim\Proje\UIS\Ana.ui")
+        self.win = uic.loadUi(r"C:\Users\kagan\OneDrive\Masaüstü\python kurs\visual sutudio\Egzersizler\Ibrahim\Proje\UIS/Ana.ui")
         self.win.btGiris.clicked.connect(self.giris)
         self.win.btIptal.clicked.connect(self.temizle)
         self.win.show()

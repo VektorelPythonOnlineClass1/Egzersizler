@@ -4,6 +4,8 @@ import sys
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import pandas as pd
+import numpy as np
 
 class App(QMainWindow):
     def __init__(self):
@@ -12,38 +14,41 @@ class App(QMainWindow):
 
 
     def initUI(self):
-        self.win = uic.loadUi(r"C:\Users\kagan\OneDrive\Masaüstü\python kurs\visual sutudio\Egzersizler\Kagan\deneme.deneme/kumanda.ui")
-        self.win.btGiris.clicked.connect(self.giris) 
+        self.win = uic.loadUi(r"C:\Users\kagan\OneDrive\Masaüstü\python kurs\visual sutudio\Egzersizler\Kagan\harf kumandası/kumanda.ui")
+        self.win.btGiris.clicked.connect(self.giris)
+        self.win.btIptal.clicked.connect(self.temizle)
         self.win.show()
 
 
     def giris(self):
         harf = self.win.harf.text()
-        self.kumanda = HarfKumanda()
-        self.kumanda.girisYap()    
+        self.HarfKumanda = HarfKumanda(harf)
+        self.HarfKumanda.girisYap()
 
-    
+
+    def temizle(self):
+        self.win.harf.setText("")        
+
+
 
 class HarfKumanda:
     def __init__(self,harf):
         self.harf = harf
 
 
-
-    def HarfGir(self):
-        if harf ==1:
+    def girisYap(self):
+        if  self.harf ==1:
             a = pd.DataFrame(np.random.randint(10,size=(0,1)),columns=["a"])
             print(a)
-            if harf ==2:
+            if  self.harf ==2:
                 b = pd.DataFrame(np.random.randint(10,size=(0,1)),columns=["b"])
                 print(b)
-                if harf ==3:
+                if  self.harf ==3:
                     c = pd.DataFrame(np.random.randint(10,size=(0,1)),columns=["c"])
                     print(c)
-                    if harf ==4:
+                    if  self.harf ==4:
                         d = pd.DataFrame(np.random.randint(10,size=(0,1)),columns=["d"])
                         print(d)
-
 
 
 
