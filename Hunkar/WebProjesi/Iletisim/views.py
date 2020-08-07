@@ -1,6 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
-
 def iletisimListele(request):
-    return 
+    return render(request,'iletisim/iletisimListe.html',{})

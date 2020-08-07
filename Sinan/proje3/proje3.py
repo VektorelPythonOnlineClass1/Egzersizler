@@ -3,26 +3,51 @@ from PyQt5 import uic
 import sys
 
 import time
-import pandas 
-import numpy
+import pandas as pd
+import numpy as np
+import itertools
 
 from openpyxl import Workbook
 from openpyxl.worksheet.table import Table, TableStyleInfo 
 import xlrd
 
-#ilk başta Excel dökümanı deklare edilmektedir. Dosya,Sayfa ve Hücreleri 
-book = xlrd.open_workbook(r'Sinan\proje3\TEST_EXCEL.xlsx')
-sheet = book.sheet_by_name('Sheet')
-data = [[sheet.cell_value(r, c) for c in range(sheet.ncols)] for r in range(sheet.nrows)]
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
-#Tablo şeklinde oluşturmak için iki for döngü iç içe olması gerekiyor.
-for j in range(sheet.ncols):
-    for i in range(sheet.nrows):
-        
-        #print(data[i][j])
-        #A kolonu getirmedim, çünkü Tarih formatı görünmemektedir. Bu yüzden direk B kolondan H kolona kadar göstermektedir.
-        print(data[i][1],data[i][2],data[i][3],data[i][4],data[i][5],data[i][6],data[i][7])
+#excel dosya
+df =  pd.read_excel("C:/Users/Toykun Yazılım/Documents/GitHub/proje3/TEST_EXCEL.xlsx")
 
-# Yakında devamı gelecek
-# Kolonları yukarıdan aşağı bir Liste olarak toplanılırsa üzerinde filtreleme ve toplama yapılabilinir diye düşünüyorum.
-# bunun için Range column diye bir fonksiyon var. Bununla ilgili devam gidilebilinir mi?
+
+class App(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+#pyqt5 designer dosya
+#arama buton ve temizle butonun tanımlanması
+    def initUI(self):
+        self.win = uic.loadUi(r"Sinan\proje3\anasayfa.ui")
+        self.win.btngonder.clicked.connect(self.ara)
+        self.win.btnsifirla.clicked.connect(self.temizle)
+        self.win.show()
+#kullanıcıdan gelecek olan 
+#ara butonun fonksiyonu
+    def ara(self,caribilgi):
+        global siparisno
+        #kullanıcıdan orderno giris yapılması
+        siparisno = self.win.carikodugiris.text()
+        #ikinci kutucukta ilk etapta Customer_no, daha sonra Product Name ve Date verilmesini 
+        caribilgi = self.win.caribilgi.text(df[df.ORDERNO==Customer_no].loc[0].ORDNERNO)
+        if not True:
+            print("Böyle bir siparişno yok")      
+#temizle butonun fonksiyonu
+    def temizle(self):
+        self.win.carikodugiris.text("")
+    
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    ex = App()
+    sys.exit(app.exec_())
+
+    #def otomatik(self):
+    #    self.win.txtUserInput.setText(#"buraya kullanıcıadınızı giriniz")
+    #    self.win.txtSifre.setText(#"buraya şifrenizi giriniz")
