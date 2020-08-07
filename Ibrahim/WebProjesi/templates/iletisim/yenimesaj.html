@@ -1,0 +1,20 @@
+{% extends '../base.html' %}
+
+{% block baslik %}
+<p>Yeni Mesaj</p>
+{% endblock baslik %}
+
+{% block icerik %}
+<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+
+					<form method="POST">
+					{% csrf_token %}
+					{{form.as_p}}
+                    <button type="submit"> Kaydet </button>
+					</form>
+					</div>
+				</div>
+			</section>
+{% endblock icerik %}

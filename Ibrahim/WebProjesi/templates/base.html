@@ -24,6 +24,16 @@
 				<ul class="links">
 					<li><a href="{% url 'anasayfa' %}">Ana Sayfa</a></li>
 					<li><a href="{% url 'iletisimListele' %}">İletişim</a></li>
+					<li>{% if user.is_authenticated %}
+					Merhaba {{user.username}} 
+					<br>
+					<a href="{% url 'logout' %}">Çıkış</a>
+					{% else %}
+					<a href="{% url 'login' %}">Kullanıcı Girişi</a>
+
+					{% endif %}
+					</li>
+					
 					{% comment %} <li><a href="generic.html">Generic</a></li> {% endcomment %}
 				</ul>
 			</nav>

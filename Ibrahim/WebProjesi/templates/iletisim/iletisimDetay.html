@@ -10,15 +10,14 @@
 				<div class="inner">
 					<div class="content">
 						<header>
-							<h2>Gönderilen Mesajlar Listesi</h2>
+							<h2>{{mesaj.adi}} &nbsp;  {{mesaj.soyadi}}</h2>
 						</header>
-						{% for mesaj in mesajlar  %}
-                        <a href="{% url 'iletisimDetay' pk=mesaj.pk %}"
-                        <h3> {{mesaj.adi}} &nbsp;  {{mesaj.soyadi}} </h3></a>
+						
+						<h3>{{mesaj.konu}}</h3>
                         <p> {{mesaj.aciklama}}</p>
-                        
-                        {% endfor %}
-						<a href="{% url 'yeniMesaj'%}">Yeni Mesaj </a>
+                        iletisimDuzenle
+						<a href="{% url 'iletisimDuzenle' pk=mesaj.pk %}">Düzenle</a><br>
+					<a href="{% url 'iletisimListele' %}">İletisim Sayfası</a>
 					</div>
 				</div>
 			</section>
