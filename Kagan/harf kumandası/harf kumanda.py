@@ -37,16 +37,16 @@ class HarfKumanda:
 
 
     def girisYap(self):
-        if self.harf.text() ==1:
+        if  self.harf ==1:
             a = pd.DataFrame(np.random.randint(10,size=(0,1)),columns=["a"])
             print(a)
-            if self.harf.text() ==2:
+            if  self.harf ==2:
                 b = pd.DataFrame(np.random.randint(10,size=(0,1)),columns=["b"])
                 print(b)
-                if self.harf.text() ==3:
+                if  self.harf ==3:
                     c = pd.DataFrame(np.random.randint(10,size=(0,1)),columns=["c"])
                     print(c)
-                    if self.harf.text() ==4:
+                    if  self.harf ==4:
                         d = pd.DataFrame(np.random.randint(10,size=(0,1)),columns=["d"])
                         print(d)
 
