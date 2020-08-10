@@ -4,6 +4,9 @@ from .forms import iletisimForm
 
 def iletisimListele(request):
     mesajlar = iletisimModel.objects.all()
+    # şartlı getirme
+    mesajlar = iletisimModel.objects.filter(adi="Ali")
+    mesajlar = iletisimModel.objects.get(adi="Ali")
     return render(request,'iletisim/iletisimListe.html',{"mesajlar":mesajlar})
 
 

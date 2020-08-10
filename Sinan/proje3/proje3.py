@@ -15,13 +15,14 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 #excel dosya
-df =  pd.read_excel("C:/Users/Toykun Yazılım/Documents/GitHub/proje3/TEST_EXCEL.xlsx")
+df = pd.read_excel("Sinan\proje3\TEST_EXCEL.xlsx")
 
 
 class App(QMainWindow):
     def __init__(self):
         super().__init__()
         self.initUI()
+        self.df = pd.read_excel("Sinan\proje3\TEST_EXCEL.xlsx")
 #pyqt5 designer dosya
 #arama buton ve temizle butonun tanımlanması
     def initUI(self):
@@ -36,7 +37,7 @@ class App(QMainWindow):
         #kullanıcıdan orderno giris yapılması
         siparisno = self.win.carikodugiris.text()
         #ikinci kutucukta ilk etapta Customer_no, daha sonra Product Name ve Date verilmesini 
-        caribilgi = self.win.caribilgi.text(df[df.ORDERNO==Customer_no].loc[0].ORDNERNO)
+        caribilgi = self.win.caribilgi.setText(str(self.df[self.df.ORDNERNO==int(siparisno)].loc[0].ORDNERNO))
         if not True:
             print("Böyle bir siparişno yok")      
 #temizle butonun fonksiyonu
