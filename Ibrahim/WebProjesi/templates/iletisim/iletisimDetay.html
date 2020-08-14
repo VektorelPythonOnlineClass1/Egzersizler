@@ -1,0 +1,24 @@
+{% extends '../base.html' %}
+
+{% block baslik %}
+<h1>İletişim Sayfası</h1>
+<p>iletişelim</p>
+{% endblock baslik %}
+
+{% block icerik %}
+<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>{{mesaj.adi}} &nbsp;  {{mesaj.soyadi}}</h2>
+						</header>
+						
+						<h3>{{mesaj.konu}}</h3>
+                        <p> {{mesaj.aciklama}}</p>
+                        iletisimDuzenle
+						<a href="{% url 'iletisimDuzenle' pk=mesaj.pk %}">Düzenle</a><br>
+					<a href="{% url 'iletisimListele' %}">İletisim Sayfası</a>
+					</div>
+				</div>
+			</section>
+{% endblock icerik %}

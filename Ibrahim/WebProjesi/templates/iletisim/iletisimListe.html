@@ -1,1 +1,25 @@
-<h1>Merhaba</h1>
+{% extends '../base.html' %}
+
+{% block baslik %}
+<h1>İletişim Sayfası</h1>
+<p>iletişelim</p>
+{% endblock baslik %}
+
+{% block icerik %}
+<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>Gönderilen Mesajlar Listesi</h2>
+						</header>
+						{% for mesaj in mesajlar  %}
+                        <a href="{% url 'iletisimDetay' pk=mesaj.pk %}"
+                        <h3> {{mesaj.adi}} &nbsp;  {{mesaj.soyadi}} </h3></a>
+                        <p> {{mesaj.aciklama}}</p>
+                        
+                        {% endfor %}
+						<a href="{% url 'yeniMesaj'%}">Yeni Mesaj </a>
+					</div>
+				</div>
+			</section>
+{% endblock icerik %}
