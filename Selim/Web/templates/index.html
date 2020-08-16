@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Anime</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static '/css/main.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">Anime Oyun İndirmeyeri</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="{% url 'anasayfa' %}">Ana Sayfa</a></li>
+					<li><a href="{% url 'iletisimListele' %}">iletisim</a></li>
+					<!-- <li><a href="generic.html">Generic</a></li> -->
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>Anime oyunları</h1>
+					<p>anime<br />
+					for download anime oyunları indrme yeri <a href="https://store.steampowered.com/app/756530/TOKYO_GHOULre_CALL_to_EXIST/?l=turkish"</a> and released under the Creative Commons License.
+					sorun yaşarsanız bize ulaşın:selim1486379@gmail.com</p>
+				</div>
+				<video autoplay loop muted playsinline src="{% static 'images/Ark Survival Evolved - Tantm.mp4' %}"></video>
+			</section>
+
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Anime Oyunlar</h2>
+						<p>other download links.</p>
+					</header>
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<a href="https://saglamindir.net/attack-on-titan-wings-of-freedom-indir" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+									<h3>saglamindir.com</h3>
+								</header>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="http://www.animekalesi.com/bolumler-277-afro-samurai.html" class="icon fa-files-o"><span class="label">Icon</span></a>
+									<h3>animekalesi.com</h3>
+								</header>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="https://coolrom.com.au/roms/ps2/70197/Ghost_in_the_Shell_-_Stand_Alone_Complex.php" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+									<h3>coolrom.com</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="https://downloadgameps3.com/bleach-soul-resurreccion-ps3-iso/" class="icon fa-line-chart"><span class="label">Icon</span></a>
+									<h3>downloadgameps3.com</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="https://www.xbox360torrent.com/threads/dynasty-warriors-gundam-reborn-ps3-oyun-all-dlc-indir-google-drive-mega.10222/" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
+									<h3>xbox360torrent.com</h3>
+								</header>
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+			<script src="{% static 'js/browser.min.js' %}"></script>
+			<script src="{% static 'js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'js/util.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
