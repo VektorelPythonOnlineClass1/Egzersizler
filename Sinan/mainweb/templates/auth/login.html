@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-  [ANGLE BRACKET]form method="POST"[ANGLE BRACKET]
-    {% csrf_token %}
-    {{ form.as_p }}
-  [ANGLE BRACKET]button type="submit" class="btn btn-primary"[ANGLE BRACKET]Login[ANGLE BRACKET]/button[ANGLE BRACKET]
-  [ANGLE BRACKET]/form[ANGLE BRACKET]
-{% endblock %}
