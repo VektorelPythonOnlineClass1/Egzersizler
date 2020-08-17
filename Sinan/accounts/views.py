@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout, get_user_model
 
-from Sinan.mainweb.forms import ContactForm, LoginForm, RegisterForm
+from mainweb.forms import ContactForm, LoginForm, RegisterForm
 
 User = get_user_model()
 

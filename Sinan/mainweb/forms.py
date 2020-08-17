@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from Sinan.mainweb.forms import ContactForm, LoginForm, RegisterForm
+from django.contrib.auth.models import User
+from mainweb.forms import ContactForm, LoginForm, RegisterForm
+
 
 class LoginForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
@@ -69,5 +71,3 @@ def register_page(request):
 def logout_page(request):
     logout(request)
     return redirect('/')
-
-auth/login.html, auth/register.html ()
