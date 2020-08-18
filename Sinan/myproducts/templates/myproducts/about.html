@@ -1,14 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "myproducts/base.html" %} {% block title %} ABOUT {% endblock title %} {%block content%}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">
+            <center>PRODUCT AUTHENTICATION WEB</center>
+        </h1>
+        <p class="lead">
+            <center>Welcome to my Website</center>
+        </p>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About this Page</title>
-</head>
+        <p class="lead">
+            <center>You just need 3 steps to be sure.</center>
+        </p>
+        <p class="lead">
+            <left>1.Sign in</left>
+        </p>
+        <p class="lead">
+            <left>2.Register your product</left>
+        </p>
+        <p class="lead">
+            <left>3.Check the advantages of your product.</left>
+        </p>
 
-<body>
-    <h1>This is my about Page</h1>
-</body>
-
-</html>
+    </div>
+</div>
+{%endblock content%}

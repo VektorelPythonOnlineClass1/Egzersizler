@@ -1,0 +1,27 @@
+{% extends "myproducts/base.html" %} {%block title %} CREATE PAGE {%endblock title %} {%block content %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">
+            <center>PRODUCT AUTHENTICATION WEB</center>
+        </h1>
+        <p class="lead">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">REGISTRATION NUMBER</label>
+                    <input type="text" class="form-control" name="regnumber">
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">PRODUCT NAME</label>
+                    <input type="text" class="form-control" name="product">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Favorite lenses</label>
+                </div>
+                <button type="submit" class="btn btn-primary">is it original!</button>
+            </form>
+        </p>
+    </div>
+</div>
+{%endblock content %}
