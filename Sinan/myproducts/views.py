@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import products
 from .forms import ListForm
@@ -27,5 +27,8 @@ def create(request):
         myproducts=products.objects.all()
         return render(request,"myproducts/create.html",{"myproducts":myproducts})
 
-
+def delete(request,products_id):
+    product = products.objects.get(pk=products_id)
+    product.delete()
+    return redirect("index")
 

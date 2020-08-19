@@ -32,6 +32,7 @@
                 <td>{{products.date}}</td>
                 <td>{{products.favorite_lenses}}</td>
                 <td>{{products.edit}}</td>
+                <td><a class="btn btn-danger" href="{% url 'delete' products.id %}" role="button">DELETE</button></td>
             </tr>
             {% endfor %}
         </tbody>
