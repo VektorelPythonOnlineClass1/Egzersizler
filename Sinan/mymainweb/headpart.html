@@ -1,17 +1,14 @@
-{% extends "myproducts/base.html" %} {% block title %} ABOUT {% endblock title %}
-
-<head>
+<body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'index' %} ">AUTHENTICATION WEB</a>
+        <a class="navbar-brand" href="{% url 'index' %} ">MY PRODUCTS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              <div class="jumbotron jumbotron-fluid"></div>
-            </button>
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'index' %} ">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'index' %} ">My Products <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href=" {% url 'about' %} ">About</a>
@@ -19,41 +16,14 @@
             </ul>
             <form class="form-inline my-2 my-lg-0" method="POST">
                 {% csrf_token %}
-                <a button class="btn btn-outline-warning my-2 my-sm-0" href=" {% url 'signup' %} " type="submit"> LOGOUT</button> </a>
+                <a button class="btn btn-outline-warning my-2 my-sm-0" href=" {% url 'signup' %} "> </button>LOGOUT</button>
+                </a>
             </form>
         </div>
     </nav>
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</head>
-{%block content%}
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">
-            <center>MY WEB</center>
-        </h1>
-        <p class="lead">
-            <center>Welcome to my Website</center>
-        </p>
-
-        <p class="lead">
-            <center>You just need 3 steps to be sure.</center>
-        </p>
-        <p class="lead">
-            <left>1.Sign in</left>
-        </p>
-        <p class="lead">
-            <left>2.Register your product</left>
-        </p>
-        <p class="lead">
-            <left>3.Check the advantages of your product.</left>
-        </p>
-
-    </div>
-</div>
-{%endblock content%}
+</body>

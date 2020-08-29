@@ -1,19 +1,52 @@
-{% extends "myproducts/base.html" %} {% block title %} HOMEPAGE {% endblock title %} {%block content%}
+{% extends "myproducts/base.html" %} {% block title %} HOMEPAGE {% endblock title %}
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">
-            <center>PRODUCT AUTHENTICATION WEB</center>
-        </h1>
-        <p class="lead">
-            <center>Welcome to my Website</center>
-        </p>
-        <div class="text-center">
-            <a class="btn btn-primary" href="{% url 'create' %}" role="button">ADD YOUR PRODUCT</a>
+<head>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'index' %} ">AUTHENTICATION WEB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <div class="jumbotron jumbotron-fluid"></div>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %} ">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=" {% url 'about' %} ">About</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" method="POST">
+                {% csrf_token %}
+                <input class="form-control mr-sm-2" type="text" placeholder="Add your Product" name="regnumber">
+                <a button class="btn btn-outline-warning my-2 my-sm-0" href=" {% url 'logout' %} "> <button>LOGOUT</button>
+            </form>
         </div>
+    </nav>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+{%block content%}
+<div class="container">
+    <h1 class="display-4">
+        <center>MY WEB</center>
+    </h1>
+    <p class="lead">
+        <center>Welcome to my Website</center>
+    </p>
+    <div class="text-center">
+        <a class="btn btn-primary" href="{% url 'create' %}" role="button">ADD YOUR PRODUCT</a>
     </div>
 </div>
+</div>
 <div class="container">
+
     <table class="table">
         <thead>
             <tr>
@@ -21,9 +54,10 @@
                 <th scope="col">product</th>
                 <th scope="col">date</th>
                 <th scope="col">favorite_lenses</th>
-                <th scope="col">edit</th>
             </tr>
         </thead>
+
+
         <tbody>
             {% for products in myproducts %}
             <tr>

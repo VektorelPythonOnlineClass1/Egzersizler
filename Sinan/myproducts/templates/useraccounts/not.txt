@@ -1,0 +1,2 @@
+for base truncatechars_html
+ <a href="{% url 'logout' %}">logout</a> {% else %}
